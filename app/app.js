@@ -1,12 +1,15 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('myApp', [
+angular.module('jaijaicakes', [
   'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
+  'jaijaicakes.login',
+  'jaijaicakes.register'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  // Set defualt view of our app to login
+
+      $routeProvider.otherwise({
+          redirectTo: '/login'
+      });
 }]);
